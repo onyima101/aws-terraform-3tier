@@ -1,6 +1,6 @@
 # configure provider credentials
 provider "aws" {
-  region                  = "ap-southeast-1"
+  region                  = "us-east-2"
   shared_credentials_file = "~/.aws/credentials"
 }
 
@@ -19,7 +19,7 @@ terraform {
   backend "s3" {
     bucket         = "tf-dev-state-bucket"
     key            = "global/s3/dev/terraform.tfstate"
-    region         = "ap-southeast-1"
+    region         = "us-east-2"
     dynamodb_table = "tf-dev-state-lock"
     encrypt        = true
   }
